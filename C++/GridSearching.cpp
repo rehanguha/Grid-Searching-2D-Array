@@ -2,7 +2,7 @@
 
 using namespace std;
 
-#define MAX 200
+#define MAX 4
 
 int f_i,f_j;
 
@@ -35,12 +35,12 @@ int grid_search(int arr[MAX][MAX],int NUM,int n=MAX)
 {
     int flag=0;
     int t=range(n);
-    //cout<<t;
+    cout<<t;
     for(int i=1;i<=t;i=i+3)
     {
         for(int j=1;j<=t;j=j+3)
         {
-        	//cout<<"\n"<<i<<"-"<<j;
+        	cout<<"\n"<<i<<"-"<<j;
             if(check(arr,i-1,j-1,NUM))
             {
                 flag=1;
@@ -114,12 +114,7 @@ int grid_search(int arr[MAX][MAX],int NUM,int n=MAX)
 
 int main()
 {
-    int k=0;
-    int arr[MAX][MAX];
-    //int arr[MAX][MAX]={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
-    for(int i=0;i<MAX;i++)
-        for(int j=0;j<MAX;j++)
-            arr[i][j]= ++k;
+    int arr[MAX][MAX]={{71,2,3,84},{5,66,7,8},{9,180,11,182},{413,3414,515,126}};
     int num;
     cout<<"Enter no.:";
     cin>>num;
@@ -127,7 +122,7 @@ int main()
     if(grid_search(arr,num))
     {
     	
-       cout<<"\n"<<f_i<<"\t"<<f_j;
+        cout<<"\n"<<f_i<<"\t"<<f_j;
     }
     else
         cout<<"\nNOT FOUND";
